@@ -1,7 +1,6 @@
 import React from "react";
 // Components
 import Categorie from "../Components/Categorie";
-import Footer from "../Components/Footer";
 
 // Styling via Styled Components
 import styled from "styled-components";

@@ -1,8 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
-
-// Components
-import Footer from "../Components/Footer";
+import { useParams } from "react-router-dom";
 
 // Styling via Styled Components
 import styled from "styled-components";
@@ -14,10 +11,8 @@ import deonImage from "../img/Stuhl.png";
 import krishaImage from "../img/Schuesseln.png";
 
 export default function CategorieDetail() {
-  // Get access to current URL
-  const url = useLocation();
-  // Get current Categorie from URL
-  const currentCategorie = url.pathname.replace("/products/", "");
+  // Get access to the id of the Route
+  const params = useParams();
   const categorieText = {
     Jenson:
       "Jenson demonstrates what designer Tim Fenby does best. Clean lines, subtle curves and an oak finish nail this season's trends. Boomerang legs add serious style points – not that this dining table needs it. Nordic retro? You got it.",
@@ -33,7 +28,7 @@ export default function CategorieDetail() {
           <div className="categories-headline">
             <div className="categories-headline-logo">
               <img src={logosimple} alt="" />
-              <h2>{currentCategorie}</h2>
+              <h2>{params.id}</h2>
             </div>
             <div className="divider"></div>
             <h3>PRODUCTS</h3>
@@ -42,22 +37,22 @@ export default function CategorieDetail() {
         <StyledCategorieDetail>
           <img
             src={
-              currentCategorie === "Jenson"
+              params.id === "Jenson"
                 ? jensonImage
-                : currentCategorie === "Deon"
+                : params.id === "Deon"
                 ? deonImage
-                : currentCategorie === "Krisha"
+                : params.id === "Krisha"
                 ? krishaImage
                 : ""
             }
-            alt={currentCategorie}
+            alt={params.id}
           />
           <p>
-            {currentCategorie === "Jenson"
+            {params.id === "Jenson"
               ? categorieText.Jenson
-              : currentCategorie === "Deon"
+              : params.id === "Deon"
               ? categorieText.Deon
-              : currentCategorie === "Krisha"
+              : params.id === "Krisha"
               ? categorieText.Krisha
               : "What"}
           </p>
@@ -106,6 +101,7 @@ const StyledCategorieDetail = styled.div`
   img {
     height: 50vh;
     width: auto;
+    object-fit: cover;
   }
   p {
     font-weight: 600;

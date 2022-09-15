@@ -20,7 +20,6 @@ function App() {
   // Get access to current URL
   const url = useLocation();
   const currentUrl = url.pathname;
-
   return (
     <div className="App">
       <GlobalStyle />

@@ -27,7 +27,7 @@ const StyledCategorie = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   padding: 2rem;
-  width: 25vw;
+  min-width: 25vw;
   min-height: 50vh;
   background-size: cover;
   background-position: center;

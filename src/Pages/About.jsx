@@ -1,8 +1,5 @@
 import React from "react";
 
-// Components
-import Footer from "../Components/Footer";
-
 // Styling via Styled Components
 import styled from "styled-components";
 
