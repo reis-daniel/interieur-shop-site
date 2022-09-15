@@ -42,7 +42,7 @@ const StyledAboutSection = styled.div`
   justify-content: center;
   gap: 1rem;
   padding: 1.5rem 5rem;
-  min-height: 94vh;
+  min-height: 88vh;
   h2,
   h3,
   p {

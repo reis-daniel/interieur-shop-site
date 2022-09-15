@@ -36,7 +36,7 @@ export default function Products() {
 }
 
 const MainContainer = styled.div`
-  height: 94vh;
+  height: 88vh;
   width: 100%;
   padding: 1.5rem 5rem;
   display: flex;

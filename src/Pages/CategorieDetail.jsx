@@ -62,6 +62,12 @@ export default function CategorieDetail() {
   );
 }
 
+const StyledMainContainer = styled.div`
+  height: 88vh;
+  width: 100%;
+  padding: 1.5rem 5rem;
+`;
+
 const StyledHeadline = styled.div`
   display: flex;
   margin: 3rem 0;
@@ -108,10 +114,4 @@ const StyledCategorieDetail = styled.div`
     font-size: 1.5rem;
     width: 30vw;
   }
-`;
-
-const StyledMainContainer = styled.div`
-  height: 94vh;
-  width: 100%;
-  padding: 1.5rem 5rem;
 `;
